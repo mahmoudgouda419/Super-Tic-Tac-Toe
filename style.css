@@ -273,19 +273,22 @@ body {
   }
   .game-status button {
     font-size: 12px;
+    margin: 10px 0 0 10px;
   }
   .outer-frame {
     width: 250px;
     height: 250px;
-    gap: 10px;
-    padding: 13px;
+    gap: 8px;
+    padding: 12px;
   }
   .inner-box {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
   }
   .box {
-    padding: 6px;
+    padding: 4px;
+    gap: 4px;
   }
   .how {
     font-size: 10px;
@@ -301,8 +304,5 @@ body {
   }
   .box.won-o::after {
     font-size: 46px;
-  }
-  .inner-box {
-    font-size: 14px;
   }
 }
