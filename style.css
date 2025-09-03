@@ -216,15 +216,28 @@ body {
   .outer-frame {
     width: 400px;
     height: 400px;
+    gap: 10px;
+    padding: 16px;
   }
   .inner-box {
     width: 30px;
     height: 30px;
   }
+  .box.won-o::after {
+    top: 18%;
+    left: 33%;
+    font-size: 66px;
+  }
+  .box.won-x::after {
+    top: 18%;
+    left: 33%;
+    font-size: 66px;
+  }
 }
 @media (max-width: 500px) {
   .game-status {
     width: 300px;
+    font-size: 16px;
   }
   .outer-frame {
     width: 300px;
@@ -237,12 +250,26 @@ body {
   .how {
     font-size: 13px;
   }
+  .box.won-x::after {
+    top: 13%;
+    left: 31%;
+    font-size: 55px;
+  }
+  .box.won-o::after {
+    top: 13%;
+    left: 31%;
+    font-size: 55px;
+  }
+  .inner-box {
+    font-size: 15px;
+  }
 }
 @media (max-width: 400px) {
   .game-status {
     width: 250px;
     font-size: 15px;
     margin-bottom: 15px;
+    padding: 11px;
   }
   .game-status button {
     font-size: 12px;
@@ -250,10 +277,15 @@ body {
   .outer-frame {
     width: 250px;
     height: 250px;
+    gap: 10px;
+    padding: 13px;
   }
   .inner-box {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
+  }
+  .box {
+    padding: 6px;
   }
   .how {
     font-size: 10px;
@@ -263,5 +295,14 @@ body {
   .how h3 {
     font-size: 12px;
     margin: 2px;
+  }
+  .box.won-x::after {
+    font-size: 46px;
+  }
+  .box.won-o::after {
+    font-size: 46px;
+  }
+  .inner-box {
+    font-size: 14px;
   }
 }
