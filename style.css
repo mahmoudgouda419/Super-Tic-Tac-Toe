@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap");
+
+body {
+  font-family: "Cascadia Code", monospace;
+  background: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+* {
+  transition: 0.3s;
+  font-family: "Cascadia Code", monospace;
+}
+
+.outer-frame {
+  max-width: 480px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 20px;
+  background: #2a2a2a;
+  border-radius: 12px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  background: #3a3a3a;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #4a4a4a;
+}
+
+.inner-box {
+  width: 40px;
+  height: 40px;
+  background: #4a4a4a;
+  border: 1px solid #5a5a5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.inner-box:hover {
+  background: #5a5a5a;
+}
+
+.inner-box.taken {
+  cursor: default;
+  background: #6a6a6a;
+}
+
+.box.active {
+  border-color: #00d4aa;
+  box-shadow: 0 0 0 1px #00d4aa;
+}
+
+.box.inactive {
+  opacity: 0.5;
+}
+
+.box.won {
+  background: #2d4a3e;
+  border-color: #00d4aa;
+}
+
+.box.won-x {
+  background: #4a2d2d;
+  border-color: #ff6b6b;
+  position: relative;
+  opacity: 30%;
+}
+
+.box.won-x::after {
+  content: "X";
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  font-size: 77px;
+  color: #ff6b6b;
+}
+
+.box.won-o {
+  background: #2d3a4a;
+  border-color: #4dabf7;
+  position: relative;
+  opacity: 30%;
+}
+
+.box.won-o::after {
+  content: "O";
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  font-size: 77px;
+  color: #008dff;
+}
+
+.box.draw {
+  background: #3a3a2d;
+  border-color: #ffd43b;
+}
+
+/* Winner Line */
+.outer-frame.game-over .box {
+  opacity: 0.2;
+  transition: opacity 0.5s ease;
+}
+
+.outer-frame.game-over .box.winnerLine {
+  opacity: 1;
+  transform: scale(1.02);
+  border-width: 3px;
+}
+.outer-frame.game-over .box.winnerLine .inner-box {
+  opacity: 40% !important;
+}
+.outer-frame.game-over .box.winnerLine .inner-box.winnerLine {
+  opacity: 60% !important;
+}
+
+.outer-frame.game-over .box.winnerLine.won-x {
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+  border-color: #ff6b6b;
+}
+
+.outer-frame.game-over .box.winnerLine.won-o {
+  box-shadow: 0 0 20px rgba(77, 171, 247, 0.5);
+  border-color: #4dabf7;
+}
+
+.game-status {
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: #2a2a2a;
+  border: 1px solid #4a4a4a;
+  border-radius: 8px;
+  font-size: 18px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.restart-btn {
+  margin-left: 12px;
+  padding: 8px 16px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.restart-btn:hover {
+  background: #ff5252;
+}
+
+.game-status.winner {
+  background: #1a3a2e;
+  border-color: #00d4aa;
+  color: #00d4aa;
+}
+
+.game-status.draw {
+  background: #3a3a1a;
+  border-color: #ffd43b;
+  color: #ffd43b;
+}
+
+.how {
+  /* top: 10px; */
+  margin: 15px;
+  line-height: 1.8;
+  background-color: #2a2a2a;
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #4a4a4a;
+  border-radius: 8px;
+  max-width: 480px;
+  max-height: 455px;
+  margin: auto;
+}
+.how h3 {
+  margin: 5px;
+}
+@media (max-width: 1130px) {
+  .game {
+    display: block;
+  }
+  .how {
+    max-height: none;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 588px) {
+  .game-status {
+    width: 400px;
+  }
+  .outer-frame {
+    width: 400px;
+    height: 400px;
+  }
+  .inner-box {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .game-status {
+    width: 300px;
+  }
+  .outer-frame {
+    width: 300px;
+    height: 300px;
+  }
+  .inner-box {
+    width: 20px;
+    height: 20px;
+  }
+  .how {
+    font-size: 13px;
+  }
+}
+@media (max-width: 400px) {
+  .game-status {
+    width: 250px;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .game-status button {
+    font-size: 12px;
+  }
+  .outer-frame {
+    width: 250px;
+    height: 250px;
+  }
+  .inner-box {
+    width: 14px;
+    height: 14px;
+  }
+  .how {
+    font-size: 10px;
+    padding: 12px;
+    margin-bottom: 30px;
+  }
+  .how h3 {
+    font-size: 12px;
+    margin: 2px;
+  }
+}
