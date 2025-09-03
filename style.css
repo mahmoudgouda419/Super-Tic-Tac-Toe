@@ -213,6 +213,9 @@ body {
   .game-status {
     width: 400px;
   }
+  .game-status button {
+    margin: 10px 0 0 10px;
+  }
   .outer-frame {
     width: 400px;
     height: 400px;
@@ -239,13 +242,21 @@ body {
     width: 300px;
     font-size: 16px;
   }
+  .game-status button {
+    font-size: 12px;
+  }
   .outer-frame {
     width: 300px;
     height: 300px;
+    gap: 8px;
+    padding: 12px;
+  }
+  .box {
+    padding: 6px;
   }
   .inner-box {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
   .how {
     font-size: 13px;
@@ -271,10 +282,7 @@ body {
     margin-bottom: 15px;
     padding: 11px;
   }
-  .game-status button {
-    font-size: 12px;
-    margin: 10px 0 0 10px;
-  }
+
   .outer-frame {
     width: 250px;
     height: 250px;
