@@ -35,9 +35,9 @@ function move(board, cell, elem) {
 
   if (checkWin(winners)) {
     gameOver = true;
-    // Mark the winning line on the main board
+
     markMainBoardWinnerLine(winners);
-    // Add game-over class to outer frame for final winner line styling
+
     document.querySelector(".outer-frame").classList.add("game-over");
     showStatus();
     return;
@@ -114,7 +114,6 @@ function markWon(board, winner) {
   const box = boxes[board];
   box.classList.add("won", `won-${winner.toLowerCase()}`);
 
-  // Find and mark the winning line
   const winningLine = getWinningLine(boards[board]);
   if (winningLine) {
     const innerBoxes = box.querySelectorAll(".inner-box");
@@ -236,7 +235,6 @@ function reset() {
     if (w) w.remove();
   });
 
-  // Remove game-over class from outer frame
   document.querySelector(".outer-frame").classList.remove("game-over");
 
   updateUI();
