@@ -120,7 +120,6 @@ html {
   border-color: #ffd43b;
 }
 
-/* Winner Line */
 .outer-frame.game-over .box {
   opacity: 0.2;
   transition: opacity 0.5s ease;
@@ -199,8 +198,7 @@ html {
   margin-bottom: 20px;
   border: 1px solid #4a4a4a;
   border-radius: 8px;
-  max-width: 480px;
-  max-height: 510px;
+  max-width: 400px;
   margin: auto;
 }
 .how h3 {
@@ -211,7 +209,6 @@ html {
     display: block;
   }
   .how {
-    max-height: none;
     margin-bottom: 50px;
   }
 }
