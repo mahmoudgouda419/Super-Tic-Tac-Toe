@@ -4,6 +4,7 @@ Super Tic Tac Toe
 This is an advanced twist on the classic Tic Tac Toe (XO). Instead of one small board, you play on 9 mini boards inside a big one. Each move you play decides the board where your opponent must play next, making the game way more strategic and fun.
 
 Play it here: [Super Tic Tac Toe](https://mahmoudgouda419.github.io/Super-Tic-Tac-Toe/)
+And this is a video that got 36 million views for Vsauce explaining the game https://www.youtube.com/shorts/_Na3a1ZrX7c.
 
 Project Structure:
 index.html → The main page and board layout.
