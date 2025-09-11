@@ -2,7 +2,7 @@
 
 body {
   font-family: "Cascadia Code", monospace;
-  background: #1a1a1a;
+  background-color: #1a1a1a;
   color: #fff;
   margin: 0;
   padding: 20px;
@@ -31,7 +31,8 @@ html {
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   padding: 20px;
-  background: #2a2a2a;
+  background-color: #2a2a2a;
+  border: 1px solid #4a4a4a;
   border-radius: 12px;
 }
 
@@ -39,7 +40,7 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
-  background: #3a3a3a;
+  background-color: #3a3a3a;
   padding: 8px;
   border-radius: 8px;
   border: 2px solid #4a4a4a;
@@ -48,7 +49,7 @@ html {
 .inner-box {
   width: 40px;
   height: 40px;
-  background: #4a4a4a;
+  background-color: #4a4a4a;
   border: 1px solid #5a5a5a;
   display: flex;
   align-items: center;
@@ -61,12 +62,12 @@ html {
 }
 
 .inner-box:hover {
-  background: #5a5a5a;
+  background-color: #5a5a5a;
 }
 
 .inner-box.taken {
   cursor: default;
-  background: #6a6a6a;
+  background-color: #6a6a6a;
 }
 
 .box.active {
@@ -79,12 +80,12 @@ html {
 }
 
 .box.won {
-  background: #2d4a3e;
+  background-color: #2d4a3e;
   border-color: #00d4aa;
 }
 
 .box.won-x {
-  background: #4a2d2d;
+  background-color: #4a2d2d;
   border-color: #ff6b6b;
   position: relative;
   opacity: 30%;
@@ -100,7 +101,7 @@ html {
 }
 
 .box.won-o {
-  background: #2d3a4a;
+  background-color: #2d3a4a;
   border-color: #4dabf7;
   position: relative;
   opacity: 30%;
@@ -116,7 +117,7 @@ html {
 }
 
 .box.draw {
-  background: #3a3a2d;
+  background-color: #3a3a2d;
   border-color: #ffd43b;
 }
 
@@ -151,19 +152,20 @@ html {
   text-align: center;
   padding: 16px;
   margin-bottom: 20px;
-  background: #2a2a2a;
+  background-color: #2a2a2a;
   border: 1px solid #4a4a4a;
   border-radius: 8px;
-  font-size: 18px;
   max-width: 510px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .restart-btn {
-  margin-left: 12px;
   padding: 8px 16px;
-  background: #ff6b6b;
+  background-color: #ff6b6b;
   color: white;
   border: none;
   border-radius: 6px;
@@ -173,19 +175,22 @@ html {
 }
 
 .restart-btn:hover {
-  background: #ff5252;
+  background-color: #ff5252;
 }
 
 .game-status.winner {
-  background: #1a3a2e;
+  background-color: #1a3a2e;
   border-color: #00d4aa;
   color: #00d4aa;
 }
 
 .game-status.draw {
-  background: #3a3a1a;
+  background-color: #3a3a1a;
   border-color: #ffd43b;
   color: #ffd43b;
+}
+.status {
+  font-size: 15px;
 }
 
 .how {
@@ -203,7 +208,118 @@ html {
 }
 .how h3 {
   margin: 5px;
+  color: #00d4aa;
+  text-shadow: 0px 0px 3px #00d4aa;
 }
+/* ---------- LIGHT---------- */
+body.light {
+  background-color: #f8f9fa;
+  color: #2d3436;
+}
+body.light .outer-frame {
+  background-color: #ffffff;
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 5px 3px #dadce0;
+}
+body.light .box {
+  background-color: #f1f3f4;
+}
+body.light .inner-box {
+  background-color: #ffffff;
+  border: 1px solid #dadce0;
+}
+body.light .inner-box:hover {
+  background-color: #e8eaed;
+}
+body.light .inner-box.taken {
+  background-color: #f1f3f4;
+}
+body.light .box.won {
+  background-color: #e8f5e8;
+}
+body.light .box.won-x {
+  background-color: #ffd8d4;
+  border-color: #ff6b6b;
+}
+body.light .box.won-o {
+  background-color: #d2ecff;
+  border-color: #4dabf7;
+}
+body.light .box.draw {
+  background-color: #fff8e1;
+
+  border-color: #ffd43b;
+}
+body.light .game-status {
+  background-color: #ffffff;
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 5px 3px #dadce0;
+}
+body.light .game-status.winner {
+  background-color: #e8f5e8;
+  border-color: #00d4aa;
+  color: #00d4aa;
+}
+body.light .game-status.draw {
+  background-color: #fff8e1;
+  border-color: #ffd43b;
+  color: #ffd43b;
+}
+body.light .how {
+  /* top: 10px; */
+  background-color: #f8f9fa;
+  color: #2d3436;
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 5px 3px #dadce0;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 63px;
+  height: 34px;
+  /* margin-right: 15px; */
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  width: 63px;
+  height: 34px;
+  cursor: pointer;
+  inset: 0;
+  border-radius: 40px;
+  background-color: #2a2a2a;
+  transition: background 1s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  top: 4px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: transform 0.6s ease, content 0.6s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+input:checked + .slider {
+  background-color: #00d4aa;
+}
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* ---------RESPONSIVE--------- */
+
 @media (max-width: 1130px) {
   .game {
     display: block;
@@ -217,7 +333,7 @@ html {
     width: 405px;
   }
   .game-status button {
-    margin: 10px 0 0 10px;
+    margin: 0px;
   }
   .outer-frame {
     width: 405px;
@@ -242,11 +358,28 @@ html {
 }
 @media (max-width: 500px) {
   .game-status {
-    width: 300px;
+    width: 315px;
     font-size: 16px;
+    padding: 13px;
   }
   .game-status button {
-    font-size: 12px;
+    font-size: 11px;
+    padding: 9px 11px;
+  }
+  .status {
+    font-size: 13px;
+  }
+  .slider {
+    width: 59px;
+    height: 32px;
+  }
+  .switch {
+    width: 59px;
+    height: 32px;
+  }
+  .slider::before {
+    height: 24px;
+    width: 24px;
   }
   .outer-frame {
     width: 315px;
@@ -284,6 +417,28 @@ html {
     font-size: 15px;
     margin-bottom: 15px;
     padding: 11px;
+  }
+  .game-status button {
+    font-size: 10px;
+    padding: 7px 9px;
+  }
+  .status {
+    font-size: 10px;
+  }
+  .switch {
+    width: 49px;
+    height: 29px;
+  }
+  .slider {
+    width: 49px;
+    height: 29px;
+  }
+  .slider::before {
+    height: 21px;
+    width: 21px;
+  }
+  input:checked + .slider::before {
+    transform: translateX(20px);
   }
 
   .outer-frame {
