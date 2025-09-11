@@ -122,7 +122,7 @@ html {
 }
 
 .outer-frame.game-over .box {
-  opacity: 0.2;
+  opacity: 0.3;
   transition: opacity 0.5s ease;
 }
 
@@ -331,14 +331,14 @@ input:checked + .slider::before {
 }
 @media (max-width: 588px) {
   .game-status {
-    width: 405px;
+    width: 410px;
   }
   .game-status button {
     margin: 0px;
   }
   .outer-frame {
-    width: 405px;
-    height: 405px;
+    width: 410px;
+    height: 410px;
     gap: 10px;
     padding: 16px;
   }
@@ -359,7 +359,7 @@ input:checked + .slider::before {
 }
 @media (max-width: 500px) {
   .game-status {
-    width: 315px;
+    width: 320px;
     font-size: 16px;
     padding: 13px;
   }
@@ -383,8 +383,8 @@ input:checked + .slider::before {
     width: 24px;
   }
   .outer-frame {
-    width: 315px;
-    height: 315px;
+    width: 320px;
+    height: 320px;
     gap: 8px;
     padding: 15px;
   }
@@ -414,7 +414,7 @@ input:checked + .slider::before {
 }
 @media (max-width: 400px) {
   .game-status {
-    width: 250px;
+    width: 265px;
     font-size: 15px;
     margin-bottom: 15px;
     padding: 11px;
@@ -443,8 +443,8 @@ input:checked + .slider::before {
   }
 
   .outer-frame {
-    width: 260px;
-    height: 260px;
+    width: 265px;
+    height: 265px;
     gap: 8px;
     padding: 12px;
   }
