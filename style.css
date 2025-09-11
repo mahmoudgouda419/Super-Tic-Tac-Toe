@@ -223,6 +223,7 @@ body.light .outer-frame {
 }
 body.light .box {
   background-color: #f1f3f4;
+  border-color: #dadada;
 }
 body.light .inner-box {
   background-color: #ffffff;
