@@ -158,37 +158,41 @@ function updateUI() {
   });
 }
 
+const input = document.querySelector("input");
 function showStatus() {
   const xo = document.querySelector(".XO");
-  let status = document.querySelector(".game-status");
-  if (status) status.remove();
+  const statusContainer = document.querySelector(".game-status");
+  const statusText = statusContainer.querySelector(".status");
 
-  status = document.createElement("div");
-  status.className = "game-status";
+  statusText.textContent = "";
 
   if (gameOver) {
     if (checkWin(winners)) {
-      status.textContent = `${player} wins!`;
-      status.classList.add("winner");
+      statusText.textContent = `${player} wins!`;
+      statusContainer.classList.add("winner");
+      statusContainer.classList.remove("draw");
     } else {
-      status.textContent = "It's a tie!";
-      status.classList.add("draw");
+      statusText.textContent = "It's a tie!";
+      statusContainer.classList.add("draw");
+      statusContainer.classList.remove("winner");
     }
   } else {
-    status.textContent = `${player}'s turn`;
+    let turnText = `${player}'s turn`;
     if (activeBoard !== null) {
-      status.textContent += " - play in highlighted board";
+      turnText += " - play in highlighted board";
     }
+    statusText.textContent = turnText;
+    statusContainer.classList.remove("winner", "draw");
   }
 
-  const btn = document.createElement("button");
-  btn.textContent = "Reset";
-  btn.className = "restart-btn";
-  btn.onclick = reset;
-  status.appendChild(btn);
-
-  xo.insertBefore(status, xo.firstChild);
-  // document.body.insertBefore(status, document.body.firstChild);
+  let btn = statusContainer.querySelector(".restart-btn");
+  if (!btn) {
+    btn = document.createElement("button");
+    btn.textContent = "Reset";
+    btn.className = "restart-btn";
+    btn.onclick = reset;
+    statusContainer.appendChild(btn);
+  }
 }
 
 function animateText(elem, text) {
@@ -246,3 +250,24 @@ if (document.readyState === "loading") {
 } else {
   init();
 }
+
+// =========================================
+let themeSwitch = document.querySelector(".game-status .switch .themeSwitch");
+let body = document.querySelector("body");
+
+input.addEventListener("change", () => {
+  body.classList.toggle("light");
+
+  if (document.body.classList.contains("light")) {
+    localStorage.setItem("theme", "light");
+  } else {
+    localStorage.setItem("theme", "dark");
+  }
+});
+
+window.onload = () => {
+  if (localStorage.getItem("theme") === "light") {
+    body.classList.add("light");
+    input.checked = true;
+  }
+};
