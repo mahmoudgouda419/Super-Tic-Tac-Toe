@@ -36,7 +36,7 @@ No game save (refresh = restart).
 No animations in this version (kept it clean and simple).
 
 Future Ideas:
-Dark/Light mode.
+Dark/Light mode. (DONE)
 Add some smooth animations (like drawing the winning line).
 AI opponent for solo play.
 Simple sound effects for better feedback.
