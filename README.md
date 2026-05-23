@@ -1,13 +1,13 @@
 # Super Tic Tac Toe
 
-A browser-based version of **Super Tic Tac Toe**, built using pure HTML, CSS, and JavaScript.
+**Super Tic Tac Toe** webgame, built using HTML, CSS, and JavaScript.
 
 Unlike normal Tic Tac Toe, this version turns the game into a much more strategic experience. Instead of one board, you play on **9 connected boards**, and every move affects where your opponent can play next.
 
-🔗 Play here:  
+DEMO:  
 https://mahmoudgouda419.github.io/Super-Tic-Tac-Toe/
 
-🎥 If you’ve never heard about the game before, this Vsauce short explains it really well:  
+If you’ve never heard about the game before, this Vsauce short explains it really well:  
 https://www.youtube.com/shorts/_Na3a1ZrX7c
 
 ---
@@ -53,7 +53,24 @@ Just like classic Tic Tac Toe, but on a much bigger scale.
 - Detects wins and draws
 - Reset button for restarting games
 - Clean and minimal UI
-- Built without any libraries or frameworks
+- Built without external libraries or frameworks
+- AI opponent mode
+- Score recorder saved using Local Storage
+- Dark / Light mode
+
+---
+
+# AI Opponent
+
+The game includes an AI Groq opponent mode for solo gameplay.
+
+The AI analyzes:
+- available cells
+- winning opportunities
+- board restrictions
+- possible future moves
+
+to create a more challenging experience compared to random moves.
 
 ---
 
@@ -90,6 +107,7 @@ Handles:
 - winner detection
 - draw logic
 - reset functionality
+- AI Groq API
 
 Everything was built using vanilla JavaScript without external libraries.
 
@@ -109,22 +127,6 @@ became much more complex than a normal Tic Tac Toe game.
 
 ---
 
-# Future Improvements
-
-Some ideas planned for future versions:
-
-- AI opponent
-- Better animations
-- Winning line effects
-- Sound effects
-- Online multiplayer
-- Match history
-- More themes and customization
-
-Dark mode has already been added.
-
----
-
 # What I Learned
 
 This project helped me practice:
@@ -133,8 +135,7 @@ This project helped me practice:
 - JavaScript logic
 - responsive web design
 - structuring larger frontend projects
-
-It also taught me how much depth simple game mechanics can have when combined together.
+- How to deal with AI 
 
 ---
 
@@ -161,10 +162,11 @@ No setup or installation required.
 # License
 
 Feel free to:
-- use
-- modify
-- improve
-- or experiment with the project
 
-Credit is appreciated.
+use
+modify
+improve
+or experiment with the project
+
+Created by Mahmoud Gouda.
 
