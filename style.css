@@ -488,6 +488,7 @@ input:checked + .slider::before {
   cursor: pointer;
   font-size: 18px;
   font-family: "Cascadia Code", monospace;
+  margin-left: 80px;
 }
 .aibtn.on {
   background-color: #1a3a2e;
@@ -503,4 +504,69 @@ body.light .aibtn.on {
   background-color: #e8f5e8;
   color: #00b894;
   border-color: #00d4aa;
+}
+.scoreboard {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.scorex,
+.scoreo {
+  margin-top: 10px;
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+body.light .scorex,
+body.light .scoreo {
+  background-color: #e8f5e8;
+  color: #00b894;
+  border-color: #00d4aa;
+}
+
+.resetScore {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.resetScore:hover {
+  background-color: #ff5252;
+}
+
+@media (max-width: 500px) {
+  .scorex,
+  .scoreo {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .resetScore {
+    font-size: 14px;
+  }
+  .aibtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1130px) {
+  .aibtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
 }
